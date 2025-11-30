@@ -4,7 +4,6 @@ import clip
 import PIL.Image
 from tqdm import tqdm
 from pinecone import Pinecone, ServerlessSpec
-from IPython.display import Image, display
 from langgraph.graph import StateGraph, START, END
 from itertools import product
 from pydantic import BaseModel,field_validator, ConfigDict
