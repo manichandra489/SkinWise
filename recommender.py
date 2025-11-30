@@ -33,6 +33,7 @@ import numpy as np
 import PIL.Image # Changed from 'from PIL import Image'
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img
+import streamlit as st
 # Load CLIP model
 device = "cuda" if torch.cuda.is_available() else "cpu"
 modeli, preprocess = clip.load("ViT-B/32", device=device)
@@ -113,7 +114,7 @@ class State(BaseModel):
 
 # Initialize client with your API key
 llm = ChatOpenAI( # Renamed instance for clarity
-      api_key="",
+      api_key=st.secrets["OpenAI_key"],
       model="gpt-4o-mini",  # You can use "gpt-4o", "gpt-5", etc.
       temperature=0.0)
 
