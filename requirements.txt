@@ -18,5 +18,5 @@ chromedriver-autoinstaller
 mtcnn
 deepface
 tf_keras
-opencv-python-headless
+opencv-python
 
